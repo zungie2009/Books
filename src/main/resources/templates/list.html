@@ -1,0 +1,34 @@
+<html layout:decorator="layout">
+<div layout:fragment="content">
+	<div>&nbsp;</div>
+	<div>&nbsp;</div>
+	<div class="table-responsive">
+		<table class="table table-striped">
+			<thead style="background-color: #ddd; color: #222">
+				<tr>
+					<th>ID</th>
+					<th>Title</th>
+					<th>Author</th>
+					<th colspan="3">Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="book:${books}" th:object="${book}">
+					<td th:object="${book}"><a
+						th:href="'javascript:document.location.href=\'/books/Edit/' + *{id} + '\';'"
+						th:text="*{id}"></a></td>
+					<td th:text="*{title}"></td>
+					<td th:text="*{author}"></td>
+					<td th:text="*{description}"></td>
+					<td><span class="glyphicon glyphicon-edit"
+						th:onclick="'javascript:document.location.href=\'/books/Edit/' + *{id} + '\';'"></span></td>
+					<td><span class="glyphicon glyphicon-trash"
+						th:onclick="'javascript:if(confirm(\'Confirm Delete: ' + *{title} + '?\')) {document.location.href=\'/books/Delete/' + *{id} + '\';};'"></span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</div>
+
+</html>

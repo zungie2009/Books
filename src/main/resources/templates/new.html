@@ -1,0 +1,36 @@
+<html layout:decorator="layout">
+<div layout:fragment="content">
+	<div>&nbsp;</div>
+	<div>&nbsp;</div>
+	<form method="post" name="newBook" action="/books/addNew">
+		<div class="container-fluid">
+			<table width="60%" cellspacing="2" cellpadding="2">
+				<tr>
+					<th colspan="2"><h2 class="form-signin-heading">New Book</h2></th>
+				</tr>
+				<tr>
+					<td>Title</td>
+					<td><input type="text" name="title" id="inputTitle"
+						class="form-control" placeholder="Book Title" autofocus="true" /></td>
+				</tr>
+				<tr>
+					<td>Author</td>
+					<td><input type="text" name="author" id="inputAuthor"
+						class="form-control" placeholder="Book Author" /></td>
+				</tr>
+				<tr>
+					<td>Description</td>
+					<td><input type="text" name="description"
+						id="inputDescription" class="form-control"
+						placeholder="Description" /></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><div style="width:40%; padding-top: 5px;"><button class="btn btn-md btn-primary btn-block"
+							type="submit">Submit</button></div></td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</div>
+
+</html>
