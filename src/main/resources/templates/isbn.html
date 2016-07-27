@@ -1,0 +1,25 @@
+<html layout:decorator="layout">
+<div layout:fragment="content">
+	<div>&nbsp;</div>
+	<div>&nbsp;</div>
+	<form method="post" name="newBook" action="/books/getIsbn">
+		<div class="container-fluid">
+			<table width="60%" cellspacing="2" cellpadding="2">
+				<tr>
+					<th colspan="2"><h2 class="form-signin-heading">Enter ISBN</h2></th>
+				</tr>
+				<tr>
+					<td>ISBN</td>
+					<td><input type="text" name="isbn" id="inputIsbn"
+						class="form-control" placeholder="ISBN" autofocus="true" /></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><div style="width:40%; padding-top: 5px;"><button class="btn btn-md btn-primary btn-block"
+							type="submit">Submit</button></div></td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</div>
+
+</html>

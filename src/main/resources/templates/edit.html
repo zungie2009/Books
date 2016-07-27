@@ -1,0 +1,48 @@
+<html layout:decorator="layout">
+<div layout:fragment="content">
+	<div>&nbsp;</div>
+	<div>&nbsp;</div>
+	<form method="post" name="newBook" action="/books/update">
+		<input type="hidden" class="form-control" name="id"
+			th:value="${book.id}" />
+		<div class="container-fluid">
+			<table width="60%" cellspacing="2" cellpadding="2">
+				<tr>
+					<th colspan="2"><h2 class="form-signin-heading">Edit Book</h2></th>
+				</tr>
+				<tr>
+					<td>ISBN</td>
+					<td><input type="text" name="isbn" id="inputIsbn"
+						class="form-control" placeholder="ISBN" autofocus="true" 
+						th:value="${book.isbn}" /></td>
+				</tr>
+				<tr>
+					<td>Title</td>
+					<td><input type="text" name="title" id="inputTitle"
+						class="form-control" placeholder="Book Title"
+						th:value="${book.title}" /></td>
+				</tr>
+				<tr>
+					<td>Author</td>
+					<td><input type="text" name="author" id="inputAuthor"
+						class="form-control" placeholder="Book Author"
+						th:value="${book.author}" /></td>
+				</tr>
+				<tr>
+					<td>Description</td>
+					<td><input type="text" name="description"
+						id="inputDescription" class="form-control"
+						placeholder="Description" th:value="${book.description}" /></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><div
+							style="width: 40%; padding-top: 5px;">
+							<button class="btn btn-md btn-primary btn-block" type="submit">Save</button>
+						</div></td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</div>
+
+</html>
